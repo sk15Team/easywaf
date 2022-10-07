@@ -1,0 +1,31 @@
+# HTTP Server.
+server:
+  address:             ":8199"
+  dumpRouterMap:       true
+  routeOverWrite:      true
+  accessLogEnabled:    true
+  #openapiPath:         "/api.json"
+  #swaggerPath:         "/swagger"
+
+# Global logging.
+logger:
+    level : "all"
+    stdout: true
+
+gToken:
+  # 缓存模式 1 gcache 2 gredis
+  CacheMode: 1
+  # 是否支持多端登录
+  MultiLogin: true
+
+  
+# Database.
+database:
+  logger:
+    level:   "all"
+    stdout:  true
+
+  default:
+    link:   "mysql:root:easywaf@tcp(mysql:3306)/waf"
+    debug:  true
+
